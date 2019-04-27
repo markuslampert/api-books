@@ -30,7 +30,7 @@ Folder "config" provides the connection to the MySQL database server and the log
 
 Folder "models" contains the ORM of the database tables "books" and „genres“. Each table is represented by a corresponding object. 
 
-Folder "api" has the subfolders "books" and "genres". These folders have on php script for each api function. E.g. the api function to read one book from the database is represented by the php script "/books/read_single.php". These php scripts create JSON strings and print them as a response to server requests.
+Folder "api" has the subfolders "books" and "genres". These folders have one php script for each api function. E.g. the api function to read one book from the database is represented by the php script "/books/read_single.php". These php scripts create JSON strings and print them as a response to server requests.
 
 The passing of variables between database and api functions is realized by the attributes of the ORM objects. E.g. if a book is selected from database the attributes of the book object are filled with the column values of the specific table. These attributes are read from the php script that implements the specific api function to read information from the corresponding table. The other way round user input (e.g. the content of a http POST request body) is saved to the attributes of an ORM object. By the attributes of the ORM object the database request will be created.
 
